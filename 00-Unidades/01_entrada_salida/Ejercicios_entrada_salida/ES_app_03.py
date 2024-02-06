@@ -34,7 +34,8 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        nombre = self.text_nombre.get()
+        alert("titulo", nombre)
                 
     
 if __name__ == "__main__":
