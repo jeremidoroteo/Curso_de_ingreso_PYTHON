@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: entrada_salida_04
 ---
@@ -33,12 +33,23 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        nombre_alumno = prompt("Titulo","Ingrese el nombre")
-        #self.text_nombre.delete(0, 30)
-        #self.text_nombre.delete(0, tkinter.END)
-        #self.text_nombre.delete(0, len(self.txt_nombre.get()))
-        self.text_nombre.delete(0, "end")
+
+        nombre_alumno = prompt("Titulo","Ingrese el nombre") 
+        self.txt_nombre.delete(0, "end")
         self.txt_nombre.insert(0, nombre_alumno)
+
+
+        #Alternativas para borrar la caja:
+            #self.text_nombre.delete(0, 30)
+            #self.text_nombre.delete(0, tkinter.END)
+            #self.text_nombre.delete(0, len(self.txt_nombre.get()))
+
+        #el ".insert" es una accion al igual que el ".get".
+            #Necesita 2 parametros: el primero indica desde que posicion del text box voy a empzar a escribir... 
+            #por default se pone 0, y el 2do parametro es el texto que quiero escribir (en la variable)
+
+    #UN TEXT BOX NOS SIRVE PARA GENERAR ENTRADAS Y TAMBIEN GENERAR SALIDAS
+        # EN ESTE CASO USAMOS UN TEXT BOX PARA UNA SALIDA DE DATOS
 
         
     

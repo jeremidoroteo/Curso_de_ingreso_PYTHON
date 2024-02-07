@@ -6,7 +6,7 @@ import customtkinter
 
 '''
 nombre: Jeremi
-apellido:
+apellido: Doroteo
 ---
 Ejercicio: entrada_salida_01
 ---

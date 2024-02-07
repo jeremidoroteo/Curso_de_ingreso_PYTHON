@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: entrada_salida_03
 ---
@@ -34,7 +34,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        nombre = self.text_nombre.get()
+        # self.text_nombre: componente del cual quiero traer un dato (caja de texto)
+            # para obtener el contenido de este text box se usa ".get". Devuelve el contenido que ingresó el usuario.
+            # el .get sirve para mostrar un contenido especifico del text box
+
+        nombre = self.txt_nombre.get()
         alert("titulo", nombre)
                 
     

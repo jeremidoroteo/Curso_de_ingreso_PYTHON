@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: entrada_salida_02
 ---
@@ -27,12 +27,24 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        #snake_case
+        
+        #snake_case (identificador que acepta python*)
+        # En Python las variables existen cuando las declaramos. Se puede declarar y usarla al mismo tiempo.
+            #Se asigna un valor a la variable con el operador " = "
+
         nombre_alumno = prompt("Datos","Ingrese su nombre")
         alert("Datos", nombre_alumno)
 
+        #El "prompt" es parecido al alert, pero espera a que el usuario ingrese un dato y lo devuelve lo que haya ingresado a la variable. Ej: si pone Juan, devuelve Juan
+            #El prompt recibe 2 paramaetros ("titulo", "instrucion"). La instruccion es el mensaje que le quiero dar al usuario
+            #A diferencia del alert, el promp esta asignado a algo. La asignacion se resuelve de derecha a izquierda; tengo que tener una variable que ataje el valor que devuelve el prompt
+        #En el 2do parametro del "alert" se pone la variable (sin comillas)
+
+        # Prompt para generar una entrada (escribo en una pedacito de memoria), y alert para mostrar un dato (leyendo un pedacito de memoria).
+
+
         nombreAlumnoRepropado
-        #lowel camel case
+        #lower camel case (se acepta en otros lenguajes)
         
         
     
