@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: entrada_salida_07
 ---
@@ -49,16 +49,64 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        pass
+        
+        valor1 = self.txt_operador_a.get()
+        valor2 = self.txt_operador_b.get()
+        
+        valor1 = int(valor1)
+        valor2 = int(valor2)
+        
+        suma = valor1 + valor2
+        alert("Resultado", f"El resultado de la suma es {suma}")
+        
+        #self.txt_operador_a.delete(0, "end")
+        #self.txt_operador_b.delete(0, "end")
 
     def btn_restar_on_click(self):
-        pass
+        
+        valor1 = self.txt_operador_a.get()
+        valor2 = self.txt_operador_b.get()
+        
+        valor1 = int(valor1)
+        valor2 = int(valor2)
+        
+        resta = valor1 - valor2
+        
+        alert("Resultado", f"El resultado de la resta es {resta}")
+        
+        #self.txt_operador_a.delete(0, "end")
+        #self.txt_operador_b.delete(0, "end")
 
     def btn_multiplicar_on_click(self):
-        pass
+        
+        valor1 = self.txt_operador_a.get()
+        valor2 = self.txt_operador_b.get()
+        
+        valor1 = int(valor1)
+        valor2 = int(valor2)
+        
+        multiplicacion = valor1 * valor2
+        
+        alert("Resultado", f"El resultado de la multiplicacion es {multiplicacion}")
+        
+        #self.txt_operador_a.delete(0, "end")
+        #self.txt_operador_b.delete(0, "end")
 
+    
     def btn_dividir_on_click(self):
-        pass
+        
+        valor1 = self.txt_operador_a.get()
+        valor2 = self.txt_operador_b.get()
+        
+        valor1 = int(valor1)
+        valor2 = int(valor2)
+        
+        division = valor1 / valor2
+        
+        alert("Resultado", f"El resultado de la division es {division}")
+        
+        #self.txt_operador_a.delete(0, "end")
+        #self.txt_operador_b.delete(0, "end")
         
 if __name__ == "__main__":
     app = App()

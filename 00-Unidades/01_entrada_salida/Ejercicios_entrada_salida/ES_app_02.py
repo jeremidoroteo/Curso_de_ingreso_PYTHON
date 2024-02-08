@@ -32,10 +32,10 @@ class App(customtkinter.CTk):
         # En Python las variables existen cuando las declaramos. Se puede declarar y usarla al mismo tiempo.
             #Se asigna un valor a la variable con el operador " = "
 
-        nombre_alumno = prompt("Datos","Ingrese su nombre")
+        nombre_alumno = promptt("Datos","Ingrese su nombre")
         alert("Datos", nombre_alumno)
 
-        #El "prompt" es parecido al alert, pero espera a que el usuario ingrese un dato y lo devuelve lo que haya ingresado a la variable. Ej: si pone Juan, devuelve Juan
+        #El "prompt" es parecido al alert, pero espera a que el usuario ingrese un dato y devuelve lo que haya ingresado a la variable. Ej: si pone Juan, devuelve Juan
             #El prompt recibe 2 paramaetros ("titulo", "instrucion"). La instruccion es el mensaje que le quiero dar al usuario
             #A diferencia del alert, el promp esta asignado a algo. La asignacion se resuelve de derecha a izquierda; tengo que tener una variable que ataje el valor que devuelve el prompt
         #En el 2do parametro del "alert" se pone la variable (sin comillas)
