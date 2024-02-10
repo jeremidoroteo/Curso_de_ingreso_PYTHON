@@ -3,10 +3,11 @@ from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
 import customtkinter
+import math
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 TP: ES_Camioneros
 ---
@@ -46,10 +47,29 @@ class App(customtkinter.CTk):
         self.btn_tiempo_llegada.grid(row=4, pady=10, padx=30, columnspan=2, sticky="nsew")
     
     def btn_cantidad_camiones_on_click(self):
-        pass
+        
+        toneladas = self.txt_toneladas.get()
+        toneladas = float(toneladas)
+        
+        cantidad_camiones = math.ceil(toneladas * 1 / 3.5)
+        
+        alert("Camiones", f"La cantidad de camiones que se necesita para transportar es: {cantidad_camiones}")
+        
+        #math.ceil() // redondea al numero entero superior
+        #math.floor() // redondea al numero entero inferior
 
     def btn_tiempo_llegada_on_click(self):
-        pass
+        
+        kilometros = self.txt_kilometros.get()
+        kilometros = float(kilometros)
+        
+        tiempo_de_llegada = round(kilometros * 1/90, 1)
+        
+        alert("Tiempo", f"El tiempo de llegada es de: {tiempo_de_llegada} hs")
+        
+        #round(a,b) // a: valor a redondear.
+        #              b: determina la cantidad de decimales que se quiere.
+        
     
     
 if __name__ == "__main__":

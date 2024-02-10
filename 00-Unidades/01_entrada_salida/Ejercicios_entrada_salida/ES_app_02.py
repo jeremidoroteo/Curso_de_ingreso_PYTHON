@@ -32,7 +32,7 @@ class App(customtkinter.CTk):
         # En Python las variables existen cuando las declaramos. Se puede declarar y usarla al mismo tiempo.
             #Se asigna un valor a la variable con el operador " = "
 
-        nombre_alumno = promptt("Datos","Ingrese su nombre")
+        nombre_alumno = prompt("Datos","Ingrese su nombre")
         alert("Datos", nombre_alumno)
 
         #El "prompt" es parecido al alert, pero espera a que el usuario ingrese un dato y devuelve lo que haya ingresado a la variable. Ej: si pone Juan, devuelve Juan
