@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: if_05
 ---
@@ -33,7 +33,15 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        edad = self.txt_edad.get()
+        edad = int(edad)
+        
+        if edad < 13 or edad > 17:
+            alert("Edad", "No es adolescente")
+            
+        
+        #if not edad > 13 and edad < 17:
+            # // No estaria mal, pero no estaria optimizado, porque el procesador realizará 4 operaciones logicas en vez de 3.
 
         
         

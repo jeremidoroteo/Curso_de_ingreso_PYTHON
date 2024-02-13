@@ -41,7 +41,7 @@ class App(customtkinter.CTk):
         
         self.txt_importe_3 = customtkinter.CTkEntry(master=self)
         self.txt_importe_3.grid(row=2, column=1)
-       
+        
         self.btn_total = customtkinter.CTkButton(master=self, text="TOTAL", command=self.btn_total_on_click)
         self.btn_total.grid(row=3, pady=10, columnspan=2, sticky="nsew")
         
@@ -65,7 +65,7 @@ class App(customtkinter.CTk):
         alert("Precio", f"El precio total de los 3 productos es : {suma}")
         
     def btn_promedio_on_click(self):
-       
+        
         precio_producto1 = self.txt_importe_1.get()
         precio_producto2 = self.txt_importe_2.get()
         precio_producto3 = self.txt_importe_3.get()
