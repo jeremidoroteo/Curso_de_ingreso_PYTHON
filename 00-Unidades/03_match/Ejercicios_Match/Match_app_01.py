@@ -7,8 +7,8 @@ import customtkinter
 
 '''
 
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: Match_01
 ---
@@ -43,8 +43,29 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        
+        mes = self.combobox_mes.get()
+        
+        match (mes):
+            case "Enero":
+                informar = "Que comiences bien el año"
+                alert("Informe", informar)
+                
+            case "Marzo":
+                informar = "A clases!!"
+                alert("Informe", informar)
+                
+            case "Julio":
+                informar = "Se vienen las vacaciones"
+                alert("Informe", informar)
+                
+            case "Diciembre":
+                informar = "Felices Fiestas!!!"
+                alert("Informe", informar)
+                
+        
     
+    #Como dice no hacer nada literalmente... entonces tengo que colocar un alert en cada case... porque si declaro la variable "informar" antes, mostraria un mensaje vacio, pero estaria mostrando algo.
     
 if __name__ == "__main__":
     app = App()

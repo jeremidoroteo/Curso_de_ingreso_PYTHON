@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: while_03
 ---
@@ -29,7 +29,12 @@ class App(customtkinter.CTk):
         
     
     def btn_pedir_clave_on_click(self):
-        pass
+        clave = prompt("Clave", "Ingrese su contraseña: ")
+        
+        while clave != "utn750":  #otra forma seria while not (clave == "utn750") // pero optimo, pues hay dos operadores relacionales
+            clave = prompt("Error", "Reingrese su contraseña: ")
+        
+        #alert("Mensaje", "Bienvenido") #lo dejo afuera del while porque si no se estaria ejecutando todas las veces que itere el while
     
     
 if __name__ == "__main__":

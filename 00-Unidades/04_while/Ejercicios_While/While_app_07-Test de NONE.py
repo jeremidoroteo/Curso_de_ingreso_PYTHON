@@ -36,33 +36,42 @@ class App(customtkinter.CTk):
 
 
     def btn_comenzar_ingreso_on_click(self):
-        
-        #Dato: El prompt devuelve un "None" cuando presiono cancelar
+        pass
+        #Dato: El prompt devuelve un "None" (un nulo) cuando presiono cancelar
         #Dato2: El input sirve para poner un valor y devuelve un valor, pero todo por consola
         
-        acumulador_numeros = 0
-        contador_iteracion = 0
+        '''PRUEBA DE "NONE":
         
-        while True:  #Si le paso un True al while se activa
-            numero = prompt("Numeros", "Ingrese un numero: ")
+        METODO 1:
+        
+        valor = prompt("titulo", "Ingrese :")
+        valor = int(valor)
+        
+        if valor == None
+            alert("lalal", "NONE")
             
-            if numero == None:
-                break       #es una setencia, un corte de control y permite parar cuando se deja de cumplir una funcion determinada
+        elif valor == 4:
+            alert("lalal", "VALOR")
+            
+            // De esta forma no se podrá parsear el valor "none". Entonces, es mejor usar un else y luego if
+            
+        METODO 2:  
 
-            numero = int(numero)
+        valor = prompt("titulo", "Ingrese :")
+        
+        if valor == None
+            alert("lalal", "NONE")
+            
+        else:
+            valor = int(valor)
+            if valor == 4:
+                alert("lalal", "VALOR")
+            
+                //Aca si es un valor distinto a "None" Entonces si podra parsearlo a un valor entero
+        
+        '''
 
-            acumulador_numeros += numero
-            contador_iteracion += 1
-        
-        promedio = acumulador_numeros / contador_iteracion
-        
-        self.txt_suma_acumulada.delete(0, "end")
-        self.txt_suma_acumulada.insert(0, acumulador_numeros)
-        
-        self.txt_promedio.delete(0, "end")
-        self.txt_promedio.insert(0, promedio)
-            
-            
+    
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

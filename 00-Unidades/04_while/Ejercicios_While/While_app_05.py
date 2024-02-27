@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: while_05
 ---
@@ -30,7 +30,16 @@ class App(customtkinter.CTk):
         
     
     def btn_validar_letra_on_click(self):
-        pass
+        letra = prompt("letra", "Ingrese una letra: ")
+        
+        while letra != "U" and letra != "T" and letra != "N":
+            letra = prompt("Invalido", "Reingrese una letra: ")
+            
+        #OBSERVACION: Si pongo un "or" en vez de un "and", entonces siempre pedirá reingresar una letra, pues siempre encontraria una condicion que seria TRUE
+        #Al parecer nunca se podria salir de esa sentencia. Un ciclo infinito (?)
+        
+        alert("mensaje", "Pudo acceder :D")
+            
             
     
 if __name__ == "__main__":

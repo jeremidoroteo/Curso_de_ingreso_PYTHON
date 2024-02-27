@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: while_02bis
 ---
@@ -29,8 +29,28 @@ class App(customtkinter.CTk):
         
     
     def btn_mostrar_iteracion_on_click(self):
-        pass
-    
+        '''  
+        contador = 1
+        suma = 0
+        
+        while contador <= 10:
+            if contador %2 == 0: #si un numero es par
+                suma += contador #lo sumo
+                
+            contador += 1
+        '''        
+        
+        #Otra forma de hacer:
+        
+        suma = 0
+        contador = 2 #necesito sumar los numeros pares, entonces puedo empezar con el primero, 2
+        
+        while contador <= 10:
+            suma += contador
+            
+            contador += 2
+            
+        alert("titulo", suma)
     
 if __name__ == "__main__":
     app = App()

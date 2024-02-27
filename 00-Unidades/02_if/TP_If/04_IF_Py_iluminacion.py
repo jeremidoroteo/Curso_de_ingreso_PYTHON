@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 TP: IF_Iluminacion
 ---
@@ -43,8 +43,66 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
-        pass
         
+        marca = self.combobox_marca.get()
+        
+        cantidad = self.combobox_cantidad.get()
+        cantidad = int(cantidad)
+        
+        precio_por_unidad = 800
+        precio_sin_descuento = float(cantidad * precio_por_unidad)
+        descuento = 0
+        mensaje_descuento = ""
+        mensaje_descuento_adicional = ""
+        
+        if cantidad > 5:
+            descuento = 0.5
+            mensaje_descuento = "Obtuvo un descuento del 50%."
+            
+        elif cantidad == 5:
+            if marca == "ArgentinaLuz":
+                descuento = 0.4
+                mensaje_descuento = "Obtuvo un descuento del 40%."
+            else:
+                descuento = 0.3
+                mensaje_descuento = "Obtuvo un descuento del 30%."
+        
+        elif cantidad == 4:
+            if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
+                descuento =  0.25
+                mensaje_descuento = "Obtuvo un descuento del 25%."
+            else:
+                descuento = 0.2
+                mensaje_descuento = "Obtuvo un descuento del 20%."
+        
+        elif cantidad == 3:
+            if marca == "ArgentinaLuz":
+                descuento = 0.15
+                mensaje_descuento = "Obtuvo un descuento del 15%."
+            elif marca == "FelipeLamparas":
+                descuento = 0.1
+                mensaje_descuento = "Obtuvo un descuento del 10%."
+            else:
+                descuento = 0.05
+                mensaje_descuento = "Obtuvo un descuento del 5%."
+                
+        importe_final = precio_sin_descuento - (precio_sin_descuento * descuento)
+        
+        if importe_final > 4000:
+            descuento_adicional = 0.05
+            importe_final = importe_final - (importe_final * descuento_adicional)
+            mensaje_descuento_adicional = "Y por superar el valor de $4000 obtuvo un descuento adicional del 5%"
+        
+        mensaje = f"El valor total es ${importe_final}. {mensaje_descuento} {mensaje_descuento_adicional}"
+        
+        alert("titulo", mensaje) 
+    
+    
+    
+    #OBSERVACION
+        #Aca los mensajes se pisan, es decir mostraria el ultimo mensaje donde se ejecute tal instruccion
+    
+    
     
 if __name__ == "__main__":
     app = App()

@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Jeremi
+apellido: Doroteo
 ---
 Ejercicio: while_04
 ---
@@ -30,7 +30,19 @@ class App(customtkinter.CTk):
         
     
     def btn_validar_numero_on_click(self):
-        pass
+        
+        numero = prompt("Numero", "Ingrese un numero: ")
+        numero = int(numero) #Parsear: es el proceso de convertir un valor literal a un valor numerico, en este caso a entero
+        
+        while numero < 0 or numero > 10:
+            numero = prompt("Invalido", "Reingrese un numero: ")
+            
+            #Volvemos a pasear porque un Prompt devuelve una cadena, es decir, un literal, por ejemplo "-8". Y no es posible comparar un literal con un valor numerico 
+            #Caracteres vs numeros, no es compatible, por eso se parsea.
+            
+            numero = int(numero)
+            
+            
     
 if __name__ == "__main__":
     app = App()
