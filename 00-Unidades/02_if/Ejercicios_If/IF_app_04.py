@@ -35,6 +35,19 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         
+        #region     "DEFINICIONES"
+        
+        '''
+        OPERADORES LOGICOS
+            Pertmiten conectar condiciones, y desembocan en una accion determinada.
+            and : "y". Devuelte True si ambos operandos son T.
+            or : "o". Devuelve True si uno de los operandos es T. Es una condiccion excluyente, se cumple una o la otra
+            not: Invierte el valor de verdad de una expresion (condicion).
+        
+        '''
+        #endregion
+        
+        
         edad = self.txt_edad.get()
         edad = int(edad)
         

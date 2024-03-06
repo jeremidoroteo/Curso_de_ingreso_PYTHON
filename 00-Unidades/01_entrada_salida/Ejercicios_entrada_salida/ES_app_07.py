@@ -57,7 +57,10 @@ class App(customtkinter.CTk):
         valor2 = int(valor2)
         
         suma = valor1 + valor2
-        alert("Resultado", f"El resultado de la suma es {suma}")
+        
+        mensaje = f"El resultado de la suma es: {suma}"
+        
+        alert("Resultado", mensaje)
         
         #self.txt_operador_a.delete(0, "end")
         #self.txt_operador_b.delete(0, "end")
@@ -107,6 +110,9 @@ class App(customtkinter.CTk):
         
         #self.txt_operador_a.delete(0, "end")
         #self.txt_operador_b.delete(0, "end")
+        
+        #Observacion
+            #Es mejor crear una variable con el mensaje y luego utilizar el alert para mostrar asi lo sobrecargamos menos...
         
 if __name__ == "__main__":
     app = App()

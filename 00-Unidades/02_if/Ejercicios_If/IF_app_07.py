@@ -43,6 +43,23 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         
+        #region     "DEFINICIONES"
+        '''
+        - ComboBox: permite seleccionar un elemento de una lista despegable de valores.
+            - Se utiliza junto con el metodo ".get" para extraer el valor.
+            - Devuelve un String.
+        
+        
+        OBERVACION
+            Tanto el "and" como el "or" funcionan como cortocircuito.
+            Por ejemplo, si una sola concion en el "and" es false, entonces todo es false, porque para que "and" sea True, todas las condiciones deben ser True.
+
+            Luego, en el "or" con que una condicion se cumpla, entonces todo el if es True, y se ejecuta el codigo.
+        
+        '''
+        #endregion
+        
+
         edad = self.txt_edad.get()
         edad = int(edad)
         

@@ -26,6 +26,24 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
+        
+        #region #> "Definiciones"
+        '''
+        PARTES DE UN ALGORITMO:
+            -Entrada: con que tipo de dato voy a trabajar
+            -Procesos: que quiero hacer con esos tipos de datos
+            -Salidas: que necesito ver como un resultado
+            
+        -Indentacion: es una sangria e indica los niveles de promacion (prioridad).
+        
+        FUCIONES:
+            -alert("a", "b"): es una ventana emergente, permite mostrar un mensaje y sirve para interactuar. Tiene 2 parametros,a y b.
+                a: titulo de la ventana // b: el mensaje que se quiere mostrar // Ambos estan entre comillas porque son valores literales.
+        
+        '''        
+        #endregion
+        
+                
         alert("titulo","esto no anda, funciona")
 
 

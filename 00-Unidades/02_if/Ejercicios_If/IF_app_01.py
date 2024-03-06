@@ -34,6 +34,30 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         
+        #region #> "Definiciones"
+        
+        '''
+        OPERADORES RELACIONALES
+            Se emplea para comparar dos elemenos. Devuelve un valo booleano (T o F)
+            > : devuelve T si el operador de la izquierda es mayor que el de la derecha
+            < : devuelve T si el operador de la izquierda es menor que el de la derecha
+            == : devuelve True si ambos operandos son iguales
+            >= : devuelve T si el operador de la izquierda es mayor o igual que el de la derecha
+            <= : devuelve T si el operador de la izquierda es menor o igual que el de la derecha
+            != : devuelve T si ambos operandos no son iguales (distintos)
+            
+        Observacion: devuelve True cuando la "boquita" come al numero mayor...
+            Tanto el "==" y el "!=" se puede usar para comparar strings
+        
+        ESTRUCTURA CONDICIONAL SIMPLE
+            if condicion:
+                accion(sentencia)
+        
+        
+        '''
+        #endregion
+        
+        
         edad = self.txt_edad.get()
         edad = int(edad)
         

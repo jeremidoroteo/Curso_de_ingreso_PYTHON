@@ -35,6 +35,46 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        
+        #region     "DEFINICIONES"
+        '''
+        ESTRUCTURAS CONDICIONALES MULTIPLES
+            Constan de varias condiciones mutuamente excluyentes.
+            if condicion1:
+                accion1
+            elif condicion2: //es la combinacion de else y if
+                accion2:
+            else: //Siempre va solo, no acepta ninguna condicion.
+                accion3
+        //Se lee: si pasa la condicion1, entonces hace la accion1, si pasa otra cosa (condicion2), entonces pasa la accion2, y sino pasa nada de las otras condiciones ateriores entonces pasa la accion3...
+        
+        
+        
+        ASI QUEDARIA EL EJERCICIO SIN LA CONTRACCION DEL ELSE-IF:
+
+            De esta forma quedaria el "anidamiento";
+        
+            edad = self.txt_edad.get()
+            edad = int(edad)
+
+            if edad < 10:
+                mostrar = "El usuario es niño"
+            else:
+                if edad < 13:
+                    mostrar = "El usuario es pre-adolescente"
+                else:
+                    if edad < 17:
+                        mostrar = "El usario es adolescente"
+                    else:
+                        mostrar = "El usuario es mayor"
+            
+            alert("Mensaje", mostrar)
+        
+        
+        '''
+        #endregion
+        
+        
         edad = self.txt_edad.get()
         edad = int(edad)
 

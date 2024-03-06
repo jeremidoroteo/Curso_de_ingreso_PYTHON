@@ -35,6 +35,19 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         
+        #region     "Deficiones"
+        
+        '''
+        ESTRUCTURA CONDICIONAL DOBLE
+            if condicion:
+                accion1
+            else: //se lee "sino", es una excepcion a la condicion, es decir contempla todo lo restante...
+                accion2
+        //Se lee "condicion es True, entonces realice la accion1, por el contrario realice la accion2.
+        
+        '''
+        #endregion
+
         edad = self.txt_edad.get()
         edad = int(edad)
         

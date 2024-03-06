@@ -64,26 +64,31 @@ class App(customtkinter.CTk):
         
         
         
-        avanzar = True
+        seguir = True
         
-        while avanzar == True:
-            nombre = prompt("Nombre", "Ingrese un nombre: ")
+        while seguir:
             
-            importe_ganado = prompt("Importe", "Ingrese un importe")
-            importe_ganado = int(importe_ganado)
+            nombre = input("Ingrese un nombre:  ")
+            
+            importe_ganado = input("Ingrese importe:    ")
+            importe_ganado = float(importe_ganado)
             
             while importe_ganado < 1000:
-                importe_ganado = prompt("invalido", "Reingrese un importe")
+                importe_ganado = input("Reingrese un importe:   ")
                 importe_ganado = int(importe_ganado)
             
-            genero = prompt("Genero", "Ingrese genero: Femenino - Masculino - Otro")
+            genero = input("Ingrese genero: Femenino - Masculino - Otro\n")
             
-            while genero != Femenino and genero != "Masculino" and genero != "Otro":
-                genero = prompt("invalido", "Reingrese genero: Femenino - Masculino - Otro")
+            while genero != "Femenino" and genero != "Masculino" and genero != "Otro":
+                genero = input("Reingrese genero: Femenino - Masculino - Otro\n")
             
-            juego = prompt("Juego", "Ingrese un juego: Ruleta - Poker - Tragamonedas")
+            juego = input("Ingrese un juego: Ruleta - Poker - Tragamonedas\n" )
             while juego != "Ruleta" and juego != "Poker" and juego != "Tragamonedas":
-                juego = prompt("invalido", "Reingrese un juego: Ruleta - Poker - Tragamonedas")
+                juego = input("Reingrese un juego: Ruleta - Poker - Tragamonedas\n" )
+                
+            
+            
+            
 
 
             match juego:
@@ -132,3 +137,18 @@ if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
     app.mainloop()
+
+
+'''
+OBSERVACIONES
+    El booleano al estar en una variable "seguir", con otra instruccion (question) nos permite cambiar el valor, a False por ejemplo, para romper el bucle en algun momento.
+    
+
+
+
+CONCEPTOS:
+
+
+
+
+'''

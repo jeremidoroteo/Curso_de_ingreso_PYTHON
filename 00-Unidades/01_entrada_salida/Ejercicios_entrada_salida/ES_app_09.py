@@ -38,10 +38,16 @@ class App(customtkinter.CTk):
         
         sueldo = float(sueldo)
         
+        #incremento_sueldo = sueldo * 0.15
+        #sueldo_actualizado = sueldo + incremento_sueldo
+        
         sueldo_actualizado = sueldo * 1.15
         
         alert("Sueldo", f"El sueldo actualizado con el 15% es : {sueldo_actualizado}")
         
+        #Observacion
+            #Si no necesito los datos de cada variable para mostar, por ejemplo en una factura...
+            # entonces puedo hacerlo en una linea como aca...
     
 if __name__ == "__main__":
     app = App()

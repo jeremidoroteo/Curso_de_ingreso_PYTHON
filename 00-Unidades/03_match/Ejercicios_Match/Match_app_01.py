@@ -44,6 +44,23 @@ class App(customtkinter.CTk):
     
     def btn_informar_on_click(self):
         
+        #region     #DEFINICIONES
+        '''
+        Match (variable):
+            case 1:
+                accion1
+            case 2: accion2
+            case _: // Es el caso default, los casos restantes... como el else en el if
+                accion3
+        
+        // Match evalua el valor de una variable, y compara con cada valor de cada caso...
+        
+        // Se lee: si se cumple el caso1, entonces pasa la accion1, si se cumple el caso2, entonces pasa la accion2, si no sucede ninguno de los casos, entonces sucede el caso default y pasa la accion3.
+        
+        '''
+        #endregion
+        
+        
         mes = self.combobox_mes.get()
         
         match (mes):

@@ -53,6 +53,9 @@ class App(customtkinter.CTk):
         
         #alert("resultado", f"El resto de dividir {valor1} por {valor2} es: {resto_division}") --> (otra alternativa)
         
+        #Observacion
+            #Puedo utilizar los valores de las primeras variables ya que de la caja obteniamos valores string, pero luego se castea el valor de la variable resto_division porque este si es un valor numerico y no se podria concatenar
+        
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

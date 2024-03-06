@@ -30,6 +30,32 @@ class App(customtkinter.CTk):
     
     def btn_mostrar_iteracion_on_click(self):
         
+        #region     DEFINICIONES
+        '''
+        ESTRUCTURAS REPETITIVAS
+            trabaja en bucle, permite repetir una accion o un conjunto de acciones las cantidades de veces que quiero
+            
+            while condicion:
+                sentencias a repetir
+                
+        
+        //El while permite ejecutar un codigo mientras la condicion se cumpla, cuando se deja de cumplir, sale del bucle y continua su ejecucion normal
+        //Cada que se ejecuta una vez la sentencia, eso se llama iteracion. Luego se vuelve a evaluar la condicion, si es True, entonces nuevamente vuelve a iterar
+        // Dentro de la sentencia debe haber por lo menos 1 que haga la condicion falsa, asi puede salir del bucle, si no seria un bucle infinito...
+        
+        
+        - Contador: sirve para contar. Tomamos un valor base y lo incrementamos con el mismo elemento, es decir un incremento constante.
+            Ejemplo: contador = 1 
+                        contador += 1 // Incrementa de 1 en 1 el contador
+        
+        - Acumulador: acumulan valores. No es constante...
+        
+        
+        
+        '''
+        #endregion
+        
+        
         contador_iteracion = 0
         
         while contador_iteracion < 10:

@@ -66,7 +66,7 @@ class App(customtkinter.CTk):
         contador_femenino = 0
         contador_otro = 0
         
-        while seguir == True:
+        while seguir:
             #Ingreso de datos y validaciones
             nombre = prompt("Nombre", "Ingrese su nombre: ")
             edad = prompt("Edad", "Ingrese su edad: ")
@@ -165,6 +165,8 @@ class App(customtkinter.CTk):
         
         print(f"Porcentajes: \n\tFemenino: {porcentaje_femeninos}%\n\tMasculino: {porcentaje_masculinos}%\n\tOtro: {porcentanje_otro}%")
         
+        
+        '''
         #DEFINICION
             #question("a", "b") // es parecido a un alert y un prompt. a: es un titulo. b: el mensaje
                 #Es una forma de trabajar con el escape (huida) del while para cuando no sabemos cuantas iteraciones vamos a realizar
@@ -185,7 +187,7 @@ class App(customtkinter.CTk):
             #Cambiar varias palabras que son iguales al mismo tiempo: me posiciono en la primera palabra y presiono ctr + d. Sigo presionando va seleccionando todas las mismas palabras hacia la derecha...
             
         #EN UNA VALIDACION SE PREGUNTA POR LO QUE NO QUIERO QUE SE CUMPLA... EJEMPLO EN WHILE
-    
+        '''
     
 if __name__ == "__main__":
     app = App()

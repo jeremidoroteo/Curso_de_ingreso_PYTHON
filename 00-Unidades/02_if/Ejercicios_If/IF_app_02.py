@@ -41,9 +41,6 @@ class App(customtkinter.CTk):
             alert("titulo", "MAYOR")
             
 
-        
-        
-    
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

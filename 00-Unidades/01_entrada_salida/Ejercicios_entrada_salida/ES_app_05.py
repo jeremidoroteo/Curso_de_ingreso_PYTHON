@@ -40,10 +40,45 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-       nombre = self.txt_nombre.get()
-       edad = self.txt_edad.get()
-       mensaje = "Usted se llama " + nombre + " y su edad es " + edad + " años"
-       alert("Datos", mensaje)
+        
+        #region #> "Definiciones"
+        '''
+        
+        TIPOS DE DATOS:
+            - String: texto (un literal)
+            - Int(er): numeros enteros
+            - Float: numeros fraccionarios (con coma) 
+        
+        - Parsear / Castear: convertir de texto a numero.
+        _____________________________________________________
+        
+        OPERADORES:
+            operan; se necesitan 2 elementos (operandos)
+            Ejemplo: Su nombre es + nombre  // Concatenacion: es solo para texto (string)
+                    operando1 , operador , operando2
+                    
+        COMO ACTUA EL OPERADOR:
+            string + string = concatena
+            int + int = suma
+            
+        OPERADORES ARITMETICOS:
+            + : suma
+            - : resta
+            * : multiplicacion
+            / : division
+            % : modulo (el resto de la division)
+        ________________________________________________________
+        
+        
+        '''
+
+        #endregion
+        
+        
+        nombre = self.txt_nombre.get()
+        edad = self.txt_edad.get()
+        mensaje = "Usted se llama " + nombre + " y su edad es " + edad + " años"
+        alert("Datos", mensaje)
 
         
     
